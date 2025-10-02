@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Car, Download } from "lucide-react";
+import { Download } from "lucide-react";
 import heroCarImage from "@/assets/hero-car.png";
 import logoImage from "@/assets/carmon-logo.png";
 
@@ -110,17 +110,13 @@ export const Hero = () => {
           </div>
         </motion.div>
 
-        {/* CTAs */}
+        {/* CTA - Single Download Button */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.2, duration: 0.6 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          className="flex justify-center"
         >
-          <Button variant="hero" size="xl" className="group">
-            <Car className="group-hover:rotate-12 transition-transform" />
-            Try the Live Demo
-          </Button>
           <Button variant="neon" size="xl">
             <Download />
             Download Pitch PDF
