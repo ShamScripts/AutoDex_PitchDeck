@@ -57,7 +57,7 @@ export const Hero = () => {
           transition={{ duration: 0.6 }}
           className="mb-8 flex justify-center"
         >
-          <img src={logoImage} alt="CarMon Go Logo" className="w-32 h-32 animate-pulse-glow" />
+          <img src={logoImage} alt="AutoDex Logo" className="w-32 h-32 animate-pulse-glow" />
         </motion.div>
 
         {/* Headline */}
@@ -66,7 +66,7 @@ export const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
         >
-          <span className="block mb-2">CarMon Go —</span>
+          <span className="block mb-2">AutoDex —</span>
           <div className="flex flex-wrap justify-center gap-4">
             {headline.map((word, i) => (
               <motion.span

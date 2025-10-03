@@ -83,7 +83,7 @@ export const Team = () => {
           <h2 className="text-7xl md:text-8xl font-display neon-text animate-flicker mb-4">
             AutoDex
           </h2>
-          <p className="text-muted-foreground text-lg">The squad behind CarMon Go 🚗✨</p>
+          <p className="text-muted-foreground text-lg">The squad behind AutoDex 🚗✨</p>
         </motion.div>
 
         {/* Intro Text */}
@@ -95,7 +95,7 @@ export const Team = () => {
           className="text-center text-foreground/80 max-w-3xl mx-auto mb-16 text-lg"
         >
           We're <span className="text-primary font-bold">AutoDex</span> — hackers, dreamers, and car hunters. 
-          Built <span className="text-secondary font-bold">CarMon Go</span> in 36 hours to turn car-spotting into the world's next game.
+          Built <span className="text-secondary font-bold">AutoDex</span> in 36 hours to turn car-spotting into the world's next game.
         </motion.p>
 
         {/* Team Cards */}

@@ -8,9 +8,9 @@ export const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           {/* Logo & Tagline */}
           <div className="flex items-center gap-4">
-            <img src={logoImage} alt="CarMon Go" className="w-12 h-12" />
+            <img src={logoImage} alt="AutoDex" className="w-12 h-12" />
             <div>
-              <p className="font-display text-lg">CarMon Go</p>
+              <p className="font-display text-lg">AutoDex</p>
               <p className="text-sm text-muted-foreground">Pokémon Go, but for cars</p>
             </div>
           </div>

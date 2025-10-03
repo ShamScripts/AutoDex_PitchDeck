@@ -69,7 +69,7 @@ export const Market = () => {
             className="absolute z-10 glass-card rounded-3xl p-8 border-2 border-accent glow-green"
           >
             <p className="font-display text-2xl text-accent text-center font-bold">
-              CarMon Go
+              AutoDex
               <br />
               Core
             </p>
