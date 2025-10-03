@@ -8,62 +8,65 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Neon Drift Palette - Cyberpunk Arcade */
-    --void: 222 47% 4%;
-    --ink: 220 20% 92%;
-    
+    /* CarMon Scheme (replacing previous colors) */
+    --void: 0 36% 7%;           /* #1A0B0B – deep oxblood background */
+    --ink: 20 45% 66%;          /* #CE9B83 – warm sandstone foreground */
+
     --background: var(--void);
     --foreground: var(--ink);
-    
-    --neon-red: 195 100% 56%;
-    --strawberry: 270 100% 56%;
-    --neon-green: 159 88% 55%;
-    --legendary-gold: 45 95% 48%;
-    
+
+    /* Map the remaining three to existing roles */
+    --neon-red: 2 65% 22%;      /* #5D1613 – deep brick (primary) */
+    --strawberry: 93 9% 50%;    /* #7D8974 – urban sage (secondary) */
+    --neon-green: 220 12% 48%;  /* #6D7686 – steel slate (accent) */
+    --legendary-gold: 20 45% 66%; /* reuse sandstone for “legendary” warmth */
+
     --primary: var(--neon-red);
     --primary-foreground: var(--void);
-    
+
     --secondary: var(--strawberry);
     --secondary-foreground: var(--ink);
-    
+
     --accent: var(--neon-green);
     --accent-foreground: var(--void);
-    
-    --muted: 222 30% 15%;
-    --muted-foreground: 220 15% 65%;
-    
-    --card: 222 40% 8%;
+
+    /* Neutrals derived from the new background */
+    --muted: 0 25% 12%;
+    --muted-foreground: 20 20% 72%;
+
+    --card: 0 30% 8%;
     --card-foreground: var(--ink);
-    
-    --border: 222 30% 18%;
-    --input: 222 30% 15%;
+
+    --border: 0 25% 14%;
+    --input: 0 25% 12%;
     --ring: var(--neon-red);
-    
-    --destructive: 0 84% 60%;
+
+    --destructive: 2 65% 22%;
     --destructive-foreground: var(--ink);
-    
+
     --popover: var(--card);
     --popover-foreground: var(--ink);
-    
+
     --radius: 0.75rem;
-    
-    /* Gradients */
+
+    /* Gradients (now use the new mapped hues) */
     --gradient-neon: linear-gradient(135deg, hsl(var(--neon-red)), hsl(var(--strawberry)));
-    --gradient-legendary: linear-gradient(135deg, hsl(var(--legendary-gold)), hsl(45 100% 65%));
+    --gradient-legendary: linear-gradient(135deg, hsl(var(--legendary-gold)), hsl(20 55% 72%));
     --gradient-glass: linear-gradient(135deg, hsla(var(--ink), 0.06), hsla(var(--ink), 0.02));
-    
-    /* Shadows */
+
+    /* Shadows updated to new hues */
     --shadow-neon-red: 0 0 20px hsla(var(--neon-red), 0.4);
     --shadow-strawberry: 0 0 20px hsla(var(--strawberry), 0.4);
     --shadow-neon-green: 0 0 20px hsla(var(--neon-green), 0.4);
     --shadow-legendary: 0 0 30px hsla(var(--legendary-gold), 0.5);
     --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.4);
-    
-    /* Animations */
+
+    /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 }
+
 
 @layer base {
   * {
