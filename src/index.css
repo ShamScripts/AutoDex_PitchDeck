@@ -92,8 +92,6 @@ All colors MUST be HSL.
     color: hsl(var(--steel-slate)); /* Muted code text color */
   }
 }
-Here’s a **drop-in replacement** for your `@layer components` that aligns with the new palette (primary = deep-brick, secondary = urban-sage, accent = steel-slate, legendary = sandstone).
-I’ve also added semantic class names and kept your old ones as aliases for backward compatibility.
 
 @layer components {
   /* Glass Card Effect */
