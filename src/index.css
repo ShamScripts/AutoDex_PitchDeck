@@ -67,7 +67,6 @@ All colors MUST be HSL.
   }
 }
 
-
 @layer base {
   * {
     @apply border-border;
@@ -76,17 +75,25 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground antialiased;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+    /* Explicit background + text fallback */
+    background-color: hsl(var(--void));       /* #1A0B0B */
+    color: hsl(var(--ink));                  /* #CE9B83 */
   }
   
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Russo One', 'Orbitron', sans-serif;
     font-weight: 400;
+    color: hsl(var(--sandstone)); /* Optional highlight for headings */
   }
   
   .font-mono {
     font-family: 'JetBrains Mono', 'Courier New', monospace;
+    color: hsl(var(--steel-slate)); /* Muted code text color */
   }
 }
+Here’s a **drop-in replacement** for your `@layer components` that aligns with the new palette (primary = deep-brick, secondary = urban-sage, accent = steel-slate, legendary = sandstone).
+I’ve also added semantic class names and kept your old ones as aliases for backward compatibility.
 
 @layer components {
   /* Glass Card Effect */
@@ -97,42 +104,33 @@ All colors MUST be HSL.
     box-shadow: var(--shadow-glass);
     transition: var(--transition-smooth);
   }
-  
+
   .glass-card:hover {
-    border-color: hsla(var(--neon-red), 0.3);
+    border-color: hsla(var(--neon-red), 0.3);   /* primary (deep-brick) glow */
     box-shadow: var(--shadow-neon-red);
     transform: translateY(-4px);
   }
-  
-  /* Neon Glow Effects */
-  .glow-blue {
-    box-shadow: var(--shadow-neon-red);
-  }
-  
-  .glow-purple {
-    box-shadow: var(--shadow-strawberry);
-  }
-  
-  .glow-green {
-    box-shadow: var(--shadow-neon-green);
-  }
-  
-  .glow-legendary {
-    box-shadow: var(--shadow-legendary);
-  }
-  
+
+  /* === Glow Utilities (semantic) === */
+  .glow-primary   { box-shadow: var(--shadow-neon-red); }       /* deep-brick */
+  .glow-secondary { box-shadow: var(--shadow-strawberry); }     /* urban-sage */
+  .glow-accent    { box-shadow: var(--shadow-neon-green); }     /* steel-slate */
+  .glow-legendary { box-shadow: var(--shadow-legendary); }      /* sandstone */
+
+  /* Back-compat aliases */
+  .glow-blue    { box-shadow: var(--shadow-neon-red); }
+  .glow-purple  { box-shadow: var(--shadow-strawberry); }
+  .glow-green   { box-shadow: var(--shadow-neon-green); }
+
   /* Animated Aura Ring */
-  .aura-ring {
-    position: relative;
-  }
-  
+  .aura-ring { position: relative; }
   .aura-ring::before {
     content: '';
     position: absolute;
     inset: -4px;
     border-radius: inherit;
     padding: 2px;
-    background: var(--gradient-neon);
+    background: var(--gradient-neon); /* primary->secondary gradient */
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
@@ -141,44 +139,38 @@ All colors MUST be HSL.
     transition: opacity 0.3s ease;
     animation: pulse-glow 3s ease-in-out infinite;
   }
-  
-  .aura-ring:hover::before {
-    opacity: 1;
-  }
-  
-  /* Neon Grid Background */
+  .aura-ring:hover::before { opacity: 1; }
+
+  /* Grid uses primary hue */
   .neon-grid {
-    background-image: 
-      linear-gradient(hsla(var(--neon-red), 0.1) 1px, transparent 1px),
-      linear-gradient(90deg, hsla(var(--neon-red), 0.1) 1px, transparent 1px);
+    background-image:
+      linear-gradient(hsla(var(--neon-red), 0.10) 1px, transparent 1px),
+      linear-gradient(90deg, hsla(var(--neon-red), 0.10) 1px, transparent 1px);
     background-size: 50px 50px;
     background-position: center center;
   }
-  
-  /* Neon Text */
+
+  /* === Text Glows mapped to new roles === */
   .neon-text {
-    text-shadow: 
+    text-shadow:
       0 0 10px hsla(var(--neon-red), 0.8),
       0 0 20px hsla(var(--neon-red), 0.6),
       0 0 30px hsla(var(--neon-red), 0.4);
   }
-  
-  .neon-text-purple {
-    text-shadow: 
+  .neon-text-purple { /* secondary */
+    text-shadow:
       0 0 10px hsla(var(--strawberry), 0.8),
       0 0 20px hsla(var(--strawberry), 0.6),
       0 0 30px hsla(var(--strawberry), 0.4);
   }
-  
-  .neon-text-green {
-    text-shadow: 
+  .neon-text-green {  /* accent */
+    text-shadow:
       0 0 10px hsla(var(--neon-green), 0.8),
       0 0 20px hsla(var(--neon-green), 0.6),
       0 0 30px hsla(var(--neon-green), 0.4);
   }
-  
-  .neon-text-legendary {
-    text-shadow: 
+  .neon-text-legendary { /* sandstone highlight */
+    text-shadow:
       0 0 10px hsla(var(--legendary-gold), 0.8),
       0 0 20px hsla(var(--legendary-gold), 0.6),
       0 0 30px hsla(var(--legendary-gold), 0.4);
