@@ -11,7 +11,7 @@ const teamMembers = [
     icon: Trophy,
   },
   {
-    name: "Alex Mehta",
+    name: "Manav Arya Singh",
     role: "AI/Backend Dev",
     tagline: "Makes neural nets purr like supercars",
     badge: "🤖 Model Whisperer",
@@ -19,7 +19,7 @@ const teamMembers = [
     icon: Cpu,
   },
   {
-    name: "Riya Kapoor",
+    name: "Samhita Kakumani",
     role: "Frontend/UX Designer",
     tagline: "Pixels, neon, and dopamine engineering",
     badge: "🎨 Neon Architect",
