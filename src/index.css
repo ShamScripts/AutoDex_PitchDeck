@@ -15,15 +15,15 @@ All colors MUST be HSL.
     --background: var(--void);
     --foreground: var(--ink);
     
-    --neon-blue: 195 100% 56%;
-    --neon-purple: 270 100% 56%;
+    --neon-red: 195 100% 56%;
+    --strawberry: 270 100% 56%;
     --neon-green: 159 88% 55%;
     --legendary-gold: 45 95% 48%;
     
-    --primary: var(--neon-blue);
+    --primary: var(--neon-red);
     --primary-foreground: var(--void);
     
-    --secondary: var(--neon-purple);
+    --secondary: var(--strawberry);
     --secondary-foreground: var(--ink);
     
     --accent: var(--neon-green);
@@ -37,7 +37,7 @@ All colors MUST be HSL.
     
     --border: 222 30% 18%;
     --input: 222 30% 15%;
-    --ring: var(--neon-blue);
+    --ring: var(--neon-red);
     
     --destructive: 0 84% 60%;
     --destructive-foreground: var(--ink);
@@ -48,13 +48,13 @@ All colors MUST be HSL.
     --radius: 0.75rem;
     
     /* Gradients */
-    --gradient-neon: linear-gradient(135deg, hsl(var(--neon-blue)), hsl(var(--neon-purple)));
+    --gradient-neon: linear-gradient(135deg, hsl(var(--neon-red)), hsl(var(--strawberry)));
     --gradient-legendary: linear-gradient(135deg, hsl(var(--legendary-gold)), hsl(45 100% 65%));
     --gradient-glass: linear-gradient(135deg, hsla(var(--ink), 0.06), hsla(var(--ink), 0.02));
     
     /* Shadows */
-    --shadow-neon-blue: 0 0 20px hsla(var(--neon-blue), 0.4);
-    --shadow-neon-purple: 0 0 20px hsla(var(--neon-purple), 0.4);
+    --shadow-neon-red: 0 0 20px hsla(var(--neon-red), 0.4);
+    --shadow-strawberry: 0 0 20px hsla(var(--strawberry), 0.4);
     --shadow-neon-green: 0 0 20px hsla(var(--neon-green), 0.4);
     --shadow-legendary: 0 0 30px hsla(var(--legendary-gold), 0.5);
     --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.4);
@@ -96,18 +96,18 @@ All colors MUST be HSL.
   }
   
   .glass-card:hover {
-    border-color: hsla(var(--neon-blue), 0.3);
-    box-shadow: var(--shadow-neon-blue);
+    border-color: hsla(var(--neon-red), 0.3);
+    box-shadow: var(--shadow-neon-red);
     transform: translateY(-4px);
   }
   
   /* Neon Glow Effects */
   .glow-blue {
-    box-shadow: var(--shadow-neon-blue);
+    box-shadow: var(--shadow-neon-red);
   }
   
   .glow-purple {
-    box-shadow: var(--shadow-neon-purple);
+    box-shadow: var(--shadow-strawberry);
   }
   
   .glow-green {
@@ -146,8 +146,8 @@ All colors MUST be HSL.
   /* Neon Grid Background */
   .neon-grid {
     background-image: 
-      linear-gradient(hsla(var(--neon-blue), 0.1) 1px, transparent 1px),
-      linear-gradient(90deg, hsla(var(--neon-blue), 0.1) 1px, transparent 1px);
+      linear-gradient(hsla(var(--neon-red), 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, hsla(var(--neon-red), 0.1) 1px, transparent 1px);
     background-size: 50px 50px;
     background-position: center center;
   }
@@ -155,16 +155,16 @@ All colors MUST be HSL.
   /* Neon Text */
   .neon-text {
     text-shadow: 
-      0 0 10px hsla(var(--neon-blue), 0.8),
-      0 0 20px hsla(var(--neon-blue), 0.6),
-      0 0 30px hsla(var(--neon-blue), 0.4);
+      0 0 10px hsla(var(--neon-red), 0.8),
+      0 0 20px hsla(var(--neon-red), 0.6),
+      0 0 30px hsla(var(--neon-red), 0.4);
   }
   
   .neon-text-purple {
     text-shadow: 
-      0 0 10px hsla(var(--neon-purple), 0.8),
-      0 0 20px hsla(var(--neon-purple), 0.6),
-      0 0 30px hsla(var(--neon-purple), 0.4);
+      0 0 10px hsla(var(--strawberry), 0.8),
+      0 0 20px hsla(var(--strawberry), 0.6),
+      0 0 30px hsla(var(--strawberry), 0.4);
   }
   
   .neon-text-green {
