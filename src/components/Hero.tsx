@@ -117,10 +117,10 @@ export const Hero = () => {
           transition={{ delay: 1.2, duration: 0.6 }}
           className="flex justify-center"
         >
-          <Button variant="neon" size="xl">
+          {/*<Button variant="neon" size="xl">
             <Download />
             Download Pitch PDF
-          </Button>
+          </Button>*/}
         </motion.div>
       </div>
     </section>
